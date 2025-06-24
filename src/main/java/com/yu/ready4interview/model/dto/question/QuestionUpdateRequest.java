@@ -1,4 +1,4 @@
-package ${packageName}.model.dto.${dataKey};
+package com.yu.ready4interview.model.dto.question;
 
 import lombok.Data;
 
@@ -6,13 +6,17 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 创建${dataName}请求
+ * 更新题目请求
  *
  * @author <a href="https://github.com/YujunGit">YujunGit</a>
-*
  */
 @Data
-public class ${upperDataKey}AddRequest implements Serializable {
+public class QuestionUpdateRequest implements Serializable {
+
+    /**
+     * id
+     */
+    private Long id;
 
     /**
      * 标题
@@ -28,6 +32,11 @@ public class ${upperDataKey}AddRequest implements Serializable {
      * 标签列表
      */
     private List<String> tags;
+
+    /**
+     * 推荐答案
+     */
+    private String answer;
 
     private static final long serialVersionUID = 1L;
 }
